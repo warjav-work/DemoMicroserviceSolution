@@ -1,0 +1,53 @@
+version: '3.4'
+
+networks:
+  backend:
+services:
+  customerdb:
+    container_name: customer-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Pa55w.rd
+    networks:
+      - backend
+    ports:
+      - 8001:1433
+  customerwebapi:
+    container_name: customer-api
+    image: ${DOCKER_REGISTRY-}customerwebapi
+    build:
+      context: .
+      dockerfile: CustomerWebApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 8002:80
+    environment:
+      - DB_HOST=customerdb
+      - DB_NAME=dms_customer
+      - DB_SA_PASSWORD=Pa55w.rd
+  productdb:
+    container_name: product-db
+    image: mysql:8.0.29-oracle
+    environment:
+      - MYSQL_ROOT_PASSWORD=Pa55w.rd
+    ports:
+      - 8003:3306
+    networks:
+      - backend
+  productwebapi:
+    container_name: product-api
+    image: ${DOCKER_REGISTRY-}productwebapi
+    build:
+      context: .
+      dockerfile: ProductWebApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 8004:80
+    environment:
+      - DB_HOST=productdb
+      - DB_NAME=dms_product
+      - DB_ROOT_PASSWORD=Pa55w.rd
+
