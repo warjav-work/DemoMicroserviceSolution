@@ -5,11 +5,13 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{B9FE619B-1731-4C9F-A30B-F3BCE4F3CB86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerWebApi", "CustomerWebApi\CustomerWebApi.csproj", "{A4A4E2F0-2326-4054-9F3F-E053FAA022D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerWebApi", "CustomerWebApi\CustomerWebApi.csproj", "{A4A4E2F0-2326-4054-9F3F-E053FAA022D0}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A1078EDE-E454-4E04-B2DC-BDD24D4EB12F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductWebApi", "ProductWebApi\ProductWebApi.csproj", "{CFBC9E76-6B24-4FC7-ADFD-772AD6967543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductWebApi", "ProductWebApi\ProductWebApi.csproj", "{CFBC9E76-6B24-4FC7-ADFD-772AD6967543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderWebApi", "OrderWebApi\OrderWebApi.csproj", "{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{CFBC9E76-6B24-4FC7-ADFD-772AD6967543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFBC9E76-6B24-4FC7-ADFD-772AD6967543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFBC9E76-6B24-4FC7-ADFD-772AD6967543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A4A4E2F0-2326-4054-9F3F-E053FAA022D0} = {B9FE619B-1731-4C9F-A30B-F3BCE4F3CB86}
 		{CFBC9E76-6B24-4FC7-ADFD-772AD6967543} = {B9FE619B-1731-4C9F-A30B-F3BCE4F3CB86}
+		{C0C9F2F6-BF03-4730-A937-C2FFE11DB3DF} = {B9FE619B-1731-4C9F-A30B-F3BCE4F3CB86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4587BFC-C0AE-4ECF-B688-6C3791CCF3A2}

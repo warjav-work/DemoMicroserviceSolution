@@ -13,6 +13,7 @@ services:
       - backend
     ports:
       - 8001:1433
+
   customerwebapi:
     container_name: customer-api
     image: ${DOCKER_REGISTRY-}customerwebapi
@@ -27,6 +28,7 @@ services:
       - DB_HOST=customerdb
       - DB_NAME=dms_customer
       - DB_SA_PASSWORD=Pa55w.rd
+
   productdb:
     container_name: product-db
     image: mysql:8.0.29-oracle
@@ -36,6 +38,7 @@ services:
       - 8003:3306
     networks:
       - backend
+
   productwebapi:
     container_name: product-api
     image: ${DOCKER_REGISTRY-}productwebapi
@@ -50,4 +53,26 @@ services:
       - DB_HOST=productdb
       - DB_NAME=dms_product
       - DB_ROOT_PASSWORD=Pa55w.rd
+
+  orderdb:
+    container_name: order-db
+    image: mongo
+    networks:
+      - backend
+    ports:
+      - 8005:27017 
+
+  orderwebapi:
+    container_name: order-api
+    image: ${DOCKER_REGISTRY-}orderwebapi
+    build:
+      context: .
+      dockerfile: OrderWebApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 8006:80
+    environment:
+      - DB_HOST=orderdb
+      - DB_NAME=dms_order
 
