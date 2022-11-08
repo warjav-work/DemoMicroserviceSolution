@@ -2,6 +2,7 @@ version: '3.4'
 
 networks:
   backend:
+  frontend:
 services:
   customerdb:
     container_name: customer-db
@@ -80,4 +81,17 @@ services:
       - 8002:80
     networks:
       - backend
+      - frontend
+
+
+  blazorserverwebui:
+    container_name: blazor-web-ui
+    image: ${DOCKER_REGISTRY-}blazorserverwebui
+    build:
+      context: .
+      dockerfile: BlazorServerWebUI/Dockerfile
+    ports:
+      - 8004:80
+    networks:
+      - frontend
 
