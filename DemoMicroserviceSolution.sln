@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderWebApi", "OrderWebApi\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{16FFA69F-470F-4679-B88E-B49C0EE0030F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{4713C4F6-EC03-42B4-BE25-DCBE98F3032A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{4713C4F6-EC03-42B4-BE25-DCBE98F3032A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{020C4ACB-123C-4987-9EBE-359BD2601993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerWebUI", "BlazorServerWebUI\BlazorServerWebUI.csproj", "{DF740A87-4057-4196-936E-D1B614F05FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerWebUI", "BlazorServerWebUI\BlazorServerWebUI.csproj", "{DF740A87-4057-4196-936E-D1B614F05FF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
