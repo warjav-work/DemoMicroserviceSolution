@@ -1,5 +1,18 @@
 {
   "Routes": [
+    // Authentication Web API
+    {
+      "UpstreamPathTemplate": "/api/account",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authenticationwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/account"
+    },
     // Customer Web API
     {
       "UpstreamPathTemplate": "/api/customer",
