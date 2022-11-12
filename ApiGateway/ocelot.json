@@ -50,7 +50,14 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/product"
+      "DownstreamPathTemplate": "/api/product",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Administrator"
+      }
     },
     {
       "UpstreamPathTemplate": "/api/product/{productId}",

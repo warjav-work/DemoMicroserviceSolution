@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddCustomJwtAuthentication();
+//builder.Services.AddCustomJwtAuthentication();
 builder.Services.AddSingleton<JwtTokenHandler>();
 
 var app = builder.Build();
