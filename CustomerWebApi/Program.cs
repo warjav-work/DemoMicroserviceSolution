@@ -1,4 +1,5 @@
 using CustomerWebApi;
+using JwtAuthenticationManager;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+/* Add Authentication to the customer project */
+builder.Services.AddCustomJwtAuthentication();
+/* ========================================== */
 
 /* Database Context Dependency Injection */
 var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
@@ -19,6 +24,8 @@ builder.Services.AddDbContext<CustomerDbContext>(options => options.UseSqlServer
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
