@@ -83,8 +83,15 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/order"
-    },
+      "DownstreamPathTemplate": "/api/order",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "30s",
+        "PeriodTimespan": 30,
+        "Limit": 1
+      }
+    },    
     {
       "UpstreamPathTemplate": "/api/order/{orderId}",
       "UpstreamHttpMethod": [ "Get", "Delete" ],
@@ -100,6 +107,10 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:800"
+    "BaseUrl": "http://localhost:8002",
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Request not allowed",
+      "HttpStatusCode": 909
+    }
   }
 }
