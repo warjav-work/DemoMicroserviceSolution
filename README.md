@@ -1,6 +1,7 @@
 # DemoMicroserviceSolution
-<p>Proyecto de microservicios con distintas bases de datos por cada uno de ellos. Servicio ApiGateway con Ocelot unificando todas las rutar por un unico endpoint.</p>
-<p>Basado en el tutorial de **Learn Microservice Architecture** [Coding Droplets](https://www.youtube.com/c/CodingDroplets)</p>
+Proyecto de microservicios con distintas bases de datos por cada uno de ellos. Servicio ApiGateway con Ocelot unificando todas las rutar por un unico endpoint.
+Basado en el tutorial de **Learn Microservice Architecture**
+[Coding Droplets](https://www.youtube.com/c/CodingDroplets)
 
 
 ## CustomerWebApi
